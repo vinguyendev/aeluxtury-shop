@@ -135,6 +135,88 @@
             </div>
         </div>
         <div class="partners-slider-block hidden-xs" id="instagram"></div>
+
+                <div class="container list-product-home">
+                    <h3 class="title-category-home"><a href="/showroom.html">Sản phẩm bán chạy nhất</a></h3>
+                    <div class="list-product-detail">
+                        <?
+                        $queryGo = "SELECT * FROM goods WHERE go_category_id = 2";
+                        $db_goods = new db_query($queryGo);
+                        while ($good = mysqli_fetch_assoc($db_goods->result)) {
+                            $picture_product = "../admin/modules/goods/images/".$good["go_picture"];
+                            ?>
+                            <div class="position-col-1 product-detail">
+                                <div class="image-product-category">
+                                    <img src="<?=$picture_product?>">
+                                </div>
+                                <div class="name-price-product-home">
+                                    <div class="name-product-category">
+                                        <p><?=$good["go_name"]?></p>
+                                        <p><?=$good["go_code"]?></p>
+                                    </div>
+                                    <div class="price-product">
+                                        <p>M</p>
+                                        <p><?=$good["go_price"]?> VNĐ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <? } ?>
+
+                    </div>
+
+                </div>
+                <style>
+                    .list-product-home {
+                        margin-top: 30px;
+                        margin-bottom: 50px;
+                    }
+
+                    .title-category-home {
+                        color: #DAAF85;
+                        font-weight: bold;
+                        font-size: 30px;
+                        padding: 20px 0;
+                    }
+                    .name-price-product-home {
+                        background-color: #ffffff;
+                        height: 100px;
+                        width: 100%;
+                        padding: 20px;
+                    }
+
+                    .name-product-category p:nth-child(2n+1){
+                        font-size: 20px;
+                        color: #171717;
+                    }
+
+                    .name-product-category p:nth-child(2n){
+                        font-size: 13px;
+                        color: #909090;
+                    }
+
+                    .price-product {
+                        float: right;
+                    }
+
+                    .price-product  p:nth-child(2n+1) {
+                        font-size: 13px;
+                        color: #ffffff;
+                        font-weight: bold;
+                    }
+
+                    .price-product  p:nth-child(2n) {
+                        font-size: 13px;
+                        color: black;
+                        font-weight: bold;
+                    }
+
+                    .slick-slide {
+                        margin: 20px;
+                    }
+                </style>
+
+
         <div class="achievement-main">
             <div class="container">
                 <div class="text-spec-block">
@@ -228,3 +310,35 @@
         <div class="sidebar-content"></div>
     </div>
 </div> -->
+
+<script>
+    var coll = document.getElementsByClassName("product-detail-best");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            console.log('click'+i);
+            this.classList.toggle("active");
+            var content = document.getElementById("info-detail-product");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        $('.list-product-detail').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' style='font-size:48px;color:#E6AF83'></i></button>",
+            nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' style='font-size:48px;color:#E6AF83'></i></button>"
+        });
+    });
+
+
+</script>

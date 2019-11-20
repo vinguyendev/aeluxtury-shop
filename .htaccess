@@ -1,76 +1,80 @@
-Options +FollowSymLinks
-RewriteEngine On
-RewriteBase /
-php_flag display_errors off
-# EXPIRES CACHING
-<IfModule mod_expires.c>
-	ExpiresActive On
-	ExpiresByType image/jpg "access 1 week"
-	ExpiresByType image/jpeg "access 1 week"
-	ExpiresByType image/gif "access 1 week"
-	ExpiresByType image/png "access 1 week"
-	ExpiresByType text/css "access 1 week"
-	ExpiresByType application/javascript "access 1 week"
-	ExpiresByType application/x-javascript "access 1 week"
-	ExpiresByType image/x-icon "access 1 week"
-    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css text/javascript application/xml application/xhtml+xml application/rss+xml application/x-javascript application/javascript
-</IfModule>
-
-#Not Found
-ErrorDocument 404 /home/not_found.php
-
-RewriteRule ^favicon.ico$ favicon.ico [L]
-RewriteRule ^robots.txt$ robots.txt [L]
-
-### Album
-RewriteRule ^album/([^/]*)-id([0-9]*).html$ /home/detail_album.php?nData=$1&iData=$2&%{QUERY_STRING} [L]
-
-### Album
-RewriteRule ^project/([^/]*)-id([0-9]*).html$ /home/detail_project.php?nData=$1&iData=$2&%{QUERY_STRING} [L]
-
-RewriteRule ^dich-vu/([^/]*)-id([0-9]*).html$ /home/detail_sevice.php?nData=$1&iData=$2&%{QUERY_STRING} [L]
-
-RewriteRule ^gioi-thieu.html$ /home/about.php [L]
-#Lien He
-RewriteRule ^lien-he.html$ /home/contact.php [L]
-RewriteRule ^checkout.html$ /home/checkout.php [L]
-RewriteRule ^cart.html$ /home/cart.php [L]
-
-#album
-RewriteRule ^album.html$ /home/album.php [L]
-
-#project
-RewriteRule ^du-an.html$ /home/project.php [L]
-
-RewriteRule ^dich-vu.html$ /home/sevice.php [L]
-
-#Search
-RewriteRule ^search?([^/]*)$ /home/search.php?s=$1&%{QUERY_STRING} [L]
-
-### Detail static
-RewriteRule ^static/([^/]*)-id([0-9]*)$ /home/static.php?record_id=$2 [L]
-
-#Tin tức
-RewriteRule ^tin-tuc.html$ /home/news_index.php [L]
-RewriteRule ^tin-tuc/([^/]*)-([0-9]*).html$ /home/news_detail.php?record_id=$2 [L]
-RewriteRule ^tin-tuc/([^/]*).html$ /home/news_type.php?nCat=$1 [L]
-RewriteRule ^tin-tuc/([^/]*).html,page-([0-9]*)$ /home/news_type.php?nCat=$1&page=$2 [L]
-
-### Product
-RewriteRule ^category/([^/]*)-id([0-9]*)$ /home/type.php?nCat=$1&iCat=$2&%{QUERY_STRING} [L]
-RewriteRule ^category/([^/]*)-id([0-9]*),page-([0-9]*)$ /home/type.php?nCat=$1&iCat=$2&page=$3&%{QUERY_STRING} [L]
-
-RewriteRule ^category/([^/]*)/([^/]*)-id([0-9]*)$ /home/type.php?filter=$1&nCat=$2&iCat=$3&%{QUERY_STRING} [L]
-RewriteRule ^category/([^/]*)/([^/]*)-id([0-9]*),page-([0-9]*)$ /home/type.php?filter=$1&nCat=$2&iCat=$3&page=$4&%{QUERY_STRING} [L]
-
-#DETAIL PRODUCT
-RewriteRule ^([^/]*)-p([0-9]*).html$ /home/product_detail.php?nData=$1&iData=$2 [L]
-
-#Type
-RewriteRule ^([^/]*).html$ /home/type.php?nCat=$1 [L]
-RewriteRule ^([^/]*).html,page-([0-9]*)$ /home/type.php?nCat=$1&page=$2 [L]
-
-#HOME
-RewriteRule ^([^/]*)$ /home/index.php [L]
-
-
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+php_flag display_errors off
+# EXPIRES CACHING
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/jpg "access 1 week"
+	ExpiresByType image/jpeg "access 1 week"
+	ExpiresByType image/gif "access 1 week"
+	ExpiresByType image/png "access 1 week"
+	ExpiresByType text/css "access 1 week"
+	ExpiresByType application/javascript "access 1 week"
+	ExpiresByType application/x-javascript "access 1 week"
+	ExpiresByType image/x-icon "access 1 week"
+    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css text/javascript application/xml application/xhtml+xml application/rss+xml application/x-javascript application/javascript
+</IfModule>
+
+#Not Found
+ErrorDocument 404 /home/not_found.php
+
+RewriteRule ^favicon.ico$ favicon.ico [L]
+RewriteRule ^robots.txt$ robots.txt [L]
+
+### Album
+RewriteRule ^album/([^/]*)-id([0-9]*).html$ /home/detail_album.php?nData=$1&iData=$2&%{QUERY_STRING} [L]
+
+### Album
+RewriteRule ^project/([^/]*)-id([0-9]*).html$ /home/detail_project.php?nData=$1&iData=$2&%{QUERY_STRING} [L]
+
+RewriteRule ^dich-vu/([^/]*)-id([0-9]*).html$ /home/detail_sevice.php?nData=$1&iData=$2&%{QUERY_STRING} [L]
+
+RewriteRule ^gioi-thieu.html$ /home/about.php [L]
+#Lien He
+RewriteRule ^lien-he.html$ /home/contact.php [L]
+RewriteRule ^checkout.html$ /home/checkout.php [L]
+RewriteRule ^cart.html$ /home/cart.php [L]
+
+#album
+RewriteRule ^album.html$ /home/album.php [L]
+
+#project
+RewriteRule ^du-an.html$ /home/project.php [L]
+
+RewriteRule ^dich-vu.html$ /home/sevice.php [L]
+
+RewriteRule ^showroom.html$ /home/showroom.php [L]
+
+RewriteRule ^category.html$ /home/category_detail.php [L]
+
+#Search
+RewriteRule ^search?([^/]*)$ /home/search.php?s=$1&%{QUERY_STRING} [L]
+
+### Detail static
+RewriteRule ^static/([^/]*)-id([0-9]*)$ /home/static.php?record_id=$2 [L]
+
+#Tin tức
+RewriteRule ^tin-tuc.html$ /home/news_index.php [L]
+RewriteRule ^tin-tuc/([^/]*)-([0-9]*).html$ /home/news_detail.php?record_id=$2 [L]
+RewriteRule ^tin-tuc/([^/]*).html$ /home/news_type.php?nCat=$1 [L]
+RewriteRule ^tin-tuc/([^/]*).html,page-([0-9]*)$ /home/news_type.php?nCat=$1&page=$2 [L]
+
+### Product
+RewriteRule ^category/([^/]*)-id([0-9]*)$ /home/type.php?nCat=$1&iCat=$2&%{QUERY_STRING} [L]
+RewriteRule ^category/([^/]*)-id([0-9]*),page-([0-9]*)$ /home/type.php?nCat=$1&iCat=$2&page=$3&%{QUERY_STRING} [L]
+
+RewriteRule ^category/([^/]*)/([^/]*)-id([0-9]*)$ /home/type.php?filter=$1&nCat=$2&iCat=$3&%{QUERY_STRING} [L]
+RewriteRule ^category/([^/]*)/([^/]*)-id([0-9]*),page-([0-9]*)$ /home/type.php?filter=$1&nCat=$2&iCat=$3&page=$4&%{QUERY_STRING} [L]
+
+#DETAIL PRODUCT
+RewriteRule ^([^/]*)-p([0-9]*).html$ /home/product_detail.php?nData=$1&iData=$2 [L]
+
+#Type
+RewriteRule ^([^/]*).html$ /home/type.php?nCat=$1 [L]
+RewriteRule ^([^/]*).html,page-([0-9]*)$ /home/type.php?nCat=$1&page=$2 [L]
+
+#HOME
+RewriteRule ^([^/]*)$ /home/index.php [L]
+
+

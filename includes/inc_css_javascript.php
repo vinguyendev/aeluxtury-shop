@@ -1,38 +1,1 @@
-<meta charset="UTF-8" />
-<title><?=$con_site_title?></title>
-<meta property="og:title" content="<?=$con_site_title?>" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="<?=$con_meta_description?>" />
-<meta property="og:url" content="" />
-<meta property="og:site_name" content="<?=$con_site_title?>" />
-<meta property="og:image" itemprop="image" content="<?='http://'.$_SERVER['HTTP_HOST'] ?><?= isset($con_news) ? $con_news : "/data/background/".$con_logo_top?>" />
-<meta name="keywords" content="<?=$con_meta_keywords?>" />
-<meta name="description" content="<?=$con_meta_description?>" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=0">
-<link href="<?=STATIC_PATH?>css/style.css" type="text/css" rel="stylesheet" />
-<link href="<?=STATIC_PATH?>css/template.css" type="text/css" data-template-style="true" rel="stylesheet" />
-<link href="<?=STATIC_PATH?>css/font-awesome.min.css" type="text/css" data-template-style="true" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
-
-<link rel="stylesheet" href="<?=STATIC_PATH?>css/owl.carousel.css" type="text/css" media="all">
-<link rel="stylesheet" href="<?=STATIC_PATH?>css/owl.theme.css" type="text/css" media="all">
-
-
-<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-
+<meta charset="UTF-8" /><title><?=$con_site_title?></title><meta property="og:title" content="<?=$con_site_title?>" /><meta property="og:type" content="website" /><meta property="og:description" content="<?=$con_meta_description?>" /><meta property="og:url" content="" /><meta property="og:site_name" content="<?=$con_site_title?>" /><meta property="og:image" itemprop="image" content="<?='http://'.$_SERVER['HTTP_HOST'] ?><?= isset($con_news) ? $con_news : "/data/background/".$con_logo_top?>" /><meta name="keywords" content="<?=$con_meta_keywords?>" /><meta name="description" content="<?=$con_meta_description?>" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><script        src="https://code.jquery.com/jquery-3.4.1.js"        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="        crossorigin="anonymous"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><link href="<?=STATIC_PATH?>css/template.css" type="text/css" data-template-style="true" rel="stylesheet" /><link href="<?=STATIC_PATH?>css/style.css" type="text/css" rel="stylesheet" /><link href="<?=STATIC_PATH?>css/font-awesome.min.css" type="text/css" data-template-style="true" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"><link rel="stylesheet" href="<?=STATIC_PATH?>css/owl.carousel.css" type="text/css" media="all"><link rel="stylesheet" href="<?=STATIC_PATH?>css/owl.theme.css" type="text/css" media="all"><!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--><link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"><link rel="manifest" href="favicon/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff">
